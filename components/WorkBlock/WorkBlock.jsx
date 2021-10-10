@@ -1,5 +1,7 @@
-import styles from './Block.module.css'
 import Image from 'next/Image'
+import DataBlock from '../DataBlock';
+import { getProjectCount } from '../../lib/project'
+
 
 export default function WorkBlock() {
     return (
@@ -20,21 +22,8 @@ export default function WorkBlock() {
         </div>
 
         <div className="flex justify-center items-center lg:mx-16 dark:text-gray-900 lg:flex-row flex-col">
-
-            <div className={` ${styles.imageBuild} flex-1 rounded-md mx-6 lg:my-0 my-4 shadow-md relative w-8/12`} >
-                <div className="bg-purple-200 bg-opacity-75 rounded-md py-8 px-4">
-                    <h1 className="sm:text-4xl text-2xl pl-8">Blogs</h1>
-                    <h1 className="sm:text-8xl font-bold text-4xl pl-8">12</h1>
-                </div>
-            </div>
-
-            <div className={` ${styles.imageBuild} flex-1 rounded-md mx-6 lg:my-0 my-4 shadow-md relative w-8/12`} >
-                <div className="bg-pink-200 bg-opacity-75 rounded-md py-8 px-4">
-                    <h1 className="sm:text-4xl text-2xl pl-8">Projects</h1>
-                    <h1 className="sm:text-8xl font-bold text-4xl pl-8">19</h1>
-                </div>
-            </div>
-
+          <DataBlock color="purple" name="Blogs" count="12" />
+          <DataBlock color="pink" name="Project" count={getProjectCount()} />
         </div>
 
       </section>

@@ -17,7 +17,9 @@ export default function Navbar() {
 
 
           <div className="flex flex-row flex-initial font-sans text-3xl font-light">
-            <div className="">Sight Explore</div>
+            <div className="">
+              <Link href="/"><a>Sight Explore</a></Link>
+            </div>
           </div>
 
 

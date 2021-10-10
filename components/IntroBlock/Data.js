@@ -23,7 +23,7 @@ const Data = [
         title: "Get in Touch",
         tagline: "Follow us on Social Platform",
         about: "lorem20 lo rem20l orem20l orem20lorem 20lor em20lorem2 0lore m20lorem 20lorem 20lorem20 lorem20",
-        link: "/contact",
+        link: "/about",
         src: "/svg/home.svg",
         color: "green",
         direction: true, 

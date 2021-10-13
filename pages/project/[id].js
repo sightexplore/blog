@@ -27,7 +27,7 @@ export default function SubProject({data, title}) {
                     return <div className="rounded border-2 border-gray-400 px-8 py-4 hover:shadow-xl" key={index}>
                       <div className="text-3xl font-bold">{x.name}</div>
                       <p className="mb-4">{x.about}</p>
-                        <a href={x.link} target="_blank" className="text-md px-4 py-1 bg-gray-800 text-white dark:bg-white dark:text-gray-800 rounded">
+                        <a href={x.link} target="_blank" rel="noreferrer" className="text-md px-4 py-1 bg-gray-800 text-white dark:bg-white dark:text-gray-800 rounded">
                           Visit
                         </a>
                     </div>

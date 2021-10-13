@@ -55,41 +55,41 @@ export default function about() {
             </div>
 
 
-            <div class="flex items-center justify-center h-screen lg:mx-32">
+            <div className="flex items-center justify-center h-screen lg:mx-32">
 
-                <div class="container">
-                    <div class="bg-gray-200 dark:bg-gray-800 rounded-lg shadow-lg p-5 md:p-20 mx-2">
-                        <div class="text-center">
-                            <h2 class="text-4xl tracking-tight leading-10 font-extrabold sm:text-5xl sm:leading-none md:text-6xl">
-                            Sight<span class="text-indigo-600">Explore</span>
+                <div className="container">
+                    <div className="bg-gray-200 dark:bg-gray-800 rounded-lg shadow-lg p-5 md:p-20 mx-2">
+                        <div className="text-center">
+                            <h2 className="text-4xl tracking-tight leading-10 font-extrabold sm:text-5xl sm:leading-none md:text-6xl">
+                            Sight<span className="text-indigo-600">Explore</span>
                             </h2>
-                            <h3 class='text-xl md:text-3xl mt-10'>We are active on</h3>
+                            <h3 className='text-xl md:text-3xl mt-10'>We are active on</h3>
                         </div>
 
-                        <div class="flex flex-wrap mt-10 justify-center">
+                        <div className="flex flex-wrap mt-10 justify-center">
 
-                            <div class="m-3">
+                            <div className="m-3">
                                 <a href="#"
-                                    class="md:w-32 bg-white tracking-wide text-gray-800 font-bold rounded-full border-2 border-blue-600 hover:border-blue-600 hover:bg-blue-600 hover:text-white shadow-md py-2 px-6 inline-flex items-center">
-                                    <span class="mx-auto">Facebook</span>
+                                    className="md:w-32 bg-white tracking-wide text-gray-800 font-bold rounded-full border-2 border-blue-600 hover:border-blue-600 hover:bg-blue-600 hover:text-white shadow-md py-2 px-6 inline-flex items-center">
+                                    <span className="mx-auto">Facebook</span>
                                 </a>
                             </div>
-                            <div class="m-3">
+                            <div className="m-3">
                                 <a href="#"
-                                    class="md:w-32 bg-white tracking-wide text-gray-800 font-bold rounded-full border-2 border-red-600 hover:border-red-600 hover:bg-red-600 hover:text-white shadow-md py-2 px-6 inline-flex items-center">
-                                    <span class="mx-auto">Youtube</span>
+                                    className="md:w-32 bg-white tracking-wide text-gray-800 font-bold rounded-full border-2 border-red-600 hover:border-red-600 hover:bg-red-600 hover:text-white shadow-md py-2 px-6 inline-flex items-center">
+                                    <span className="mx-auto">Youtube</span>
                                 </a>
                             </div>
-                            <div class="m-3">
+                            <div className="m-3">
                                 <a href="#"
-                                    class="md:w-32 bg-white tracking-wide text-gray-800 font-bold rounded-full border-2 border-purple-600 hover:border-purple-600 hover:bg-purple-600 hover:text-white shadow-md py-2 px-6 inline-flex items-center">
-                                    <span class="mx-auto">Instagram</span>
+                                    className="md:w-32 bg-white tracking-wide text-gray-800 font-bold rounded-full border-2 border-purple-600 hover:border-purple-600 hover:bg-purple-600 hover:text-white shadow-md py-2 px-6 inline-flex items-center">
+                                    <span className="mx-auto">Instagram</span>
                                 </a>
                             </div>
-                            <div class="m-3">
+                            <div className="m-3">
                                 <a href="#"
-                                    class="md:w-32 bg-white tracking-wide text-gray-800 font-bold rounded-full border-2 border-black hover:border-black hover:bg-black hover:text-white shadow-md py-2 px-6 inline-flex items-center">
-                                    <span class="mx-auto">Github</span>
+                                    className="md:w-32 bg-white tracking-wide text-gray-800 font-bold rounded-full border-2 border-black hover:border-black hover:bg-black hover:text-white shadow-md py-2 px-6 inline-flex items-center">
+                                    <span className="mx-auto">Github</span>
                                 </a>
                             </div>
 

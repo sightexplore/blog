@@ -12,7 +12,7 @@ export default function AnalyticBlock() {
     <p className="text-xl mb-2  text-center" >Never stop learning, because life never stops teaching.</p>
     </div>
     <div className="flex-1 mx-auto">
-    <Image src="/svg/home.svg" width={600} height={400} />
+    <Image src="/svg/home.svg" width={600} height={400} alt={`hero-icon`}/>
     </div>
 </div>
 

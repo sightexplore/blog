@@ -20,7 +20,7 @@ export default function BlogPage({ data }) {
             
             <div className="group main-blog relative">
                 <div className="main-blog-img">
-                    <Image src={data.imageLink} width={1600} height={900}/>
+                    <Image src={data.imageLink} width={1600} height={900} alt={`Image: ${data.filename}`}/>
                 </div>
                 <div className="absolute bottom-0 text-left px-2 py-1 sm:p-2 mb-1 bg-white dark:bg-black bg-opacity-25 dark:bg-opacity-50 w-full group-hover:bg-opacity-75 transition duration-300 ease-in-out">
                     <h1 className="font-bold text-md sm:text-lg sm:mb-1 md:text-4xl lg:pt-8 lg:px-8 xl:text-6xl">{data.title}</h1>
@@ -46,7 +46,7 @@ export default function BlogPage({ data }) {
 
                             
             <style jsx global>{`
-                .markdown-blog > p, .markdown-blog > ul{
+                .markdown-blog > p, .markdown-blog > ul, .markdown-blog > blockquote, .markdown-blog > ol{
                     margin: 16px 0;
                 }
 
@@ -61,6 +61,48 @@ export default function BlogPage({ data }) {
 
                 .markdown-blog > p > img{
                     margin: 0px auto;
+                }
+
+                .markdown-blog > blockquote {
+                    font-size: 125%;
+                    opacity: 0.5;
+                    font-style: italic;
+                    border-left: 4px solid ${colorTheme === 'light'? '#1f2937': '#ccd4e1'};
+                    background-color: ${colorTheme === 'light'? '#0c1117': '#eaecef'};
+                }
+
+                .markdown-blog > blockquote > p {
+                    padding: 20px;
+                }
+
+                .markdown-blog > blockquote::before {
+                    content: "\"";
+                    position: absolute;
+                    font-size: 36px;
+                }
+
+                .markdown-blog ol li{
+                    list-style: devanagari;
+                }
+
+                .markdown-blog ul li {
+                    list-style: disc;
+                }
+
+                .markdown-blog ul li *{
+                    margin-left: 0.5rem;
+                }
+
+                .markdown-blog ol li *{
+                    margin-left: 0.5rem;
+                }
+
+                .markdown-blog p a{
+                    color: #0088ff;
+                }
+
+                .markdown-blog p a: hover{
+                    color: #00ff88;
                 }
 
             `}</style>

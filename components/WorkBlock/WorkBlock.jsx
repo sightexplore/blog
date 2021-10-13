@@ -17,7 +17,7 @@ export default function WorkBlock() {
             </p>
           </div>
           <div className="flex-1 mx-auto">
-            <Image src="/svg/home.svg" width={600} height={400} />
+            <Image src="/svg/home.svg" width={600} height={400} alt={`hero-icon`} />
           </div>
         </div>
 

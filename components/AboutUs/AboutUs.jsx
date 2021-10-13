@@ -11,7 +11,7 @@ export default function AboutUs() {
 
             <div className="group flex-initial h-full m-4 shadow-xl relative">
                 <div className="flex h-100 group-hover:opacity-25 transition duration-300 ease-in-out">
-                    <Image src="https://source.unsplash.com/6mRfNloPHlc/900x900" width={450} height={450}/>
+                    <Image src="https://source.unsplash.com/6mRfNloPHlc/900x900" width={450} height={450} alt={`member-name`}/>
                 </div>
                 <div className="absolute bottom-0 text-left pl-5 mb-5 group-hover:opacity-100 opacity-0 transition duration-300 ease-in-out">
                     {/* <p className="text-2xl mb-0 animate-pulse">Undercover</p> */}
@@ -33,7 +33,7 @@ export default function AboutUs() {
 
             <div className="group flex-initial h-full m-4 shadow-xl relative">
                 <div className="flex h-100 group-hover:opacity-25 transition duration-300 ease-in-out">
-                    <Image src="https://source.unsplash.com/6mRo659CPmM/900x900" width={450} height={450}/>
+                    <Image src="https://source.unsplash.com/6mRo659CPmM/900x900" width={450} height={450} alt={`member-name`}/>
                 </div>
                 <div className="absolute bottom-0 text-left pl-5 mb-5 group-hover:opacity-100 opacity-0 transition duration-300 ease-in-out">
                     {/* <p className="text-2xl mb-0 animate-pulse">Undercover</p> */}

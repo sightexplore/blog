@@ -28,7 +28,7 @@ export default function IntroBlock() {
                         </div>
 
                         <div className="flex-1 mx-auto">
-                            <Image src={x.src} width={600} height={400} />
+                            <Image src={x.src} width={600} height={400} alt={`hero-icon`} />
                         </div>
 
                     </div>

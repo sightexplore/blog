@@ -2,7 +2,7 @@
 title: 'TEST Pre-rendering'
 date: '2020-01-01'
 category: 'Mathematics'
-tags: 'ReactJS, NextJS,JS,SSR'
+tags: 'ReactJS,NextJS,JS,SSR,Test1'
 imageLink: 'https://source.unsplash.com/1600x900/?stars,planet'
 featured: '0'
 ---

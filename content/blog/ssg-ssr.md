@@ -2,7 +2,7 @@
 title: 'SSR vs SSG'
 date: '2020-01-01'
 category: 'Computer'
-tags: 'ReactJS, NextJS,JS,SSG'
+tags: 'ReactJS,NextJS,JS,SSG,Test3'
 imageLink: 'https://source.unsplash.com/1600x900/?cold,night'
 featured: '1'
 ---

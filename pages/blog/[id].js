@@ -11,6 +11,8 @@ export default function BlogPage({ data }) {
 
     const router = useRouter()
     const { colorTheme } = useTheme()
+    const tags = data.tags.split(',')
+    console.log(tags)
 
     return (
         <Layout>
@@ -32,17 +34,23 @@ export default function BlogPage({ data }) {
             </div>
 
             <br />
-
             <div dangerouslySetInnerHTML={{ __html: data.contentHtml }} className="markdown-blog"/>
-
-
             <hr className="my-8" />
+
+            <div className="my-8 mx-4 ">
+                <h1 className="text-xl mb-4">Tags:</h1>
+                <div className="flex flex-start text-sm flex-wrap text-gray-200 dark:text-gray-800">
+                    {tags.map((x,index) => 
+                        <p key={index} className="mr-2 mb-2 px-4 py-1 rounded-full dark:bg-white bg-gray-800 ">
+                            {x}
+                        </p>
+                    )}
+                </div>
+            </div>
 
             <button type="button" onClick={() => router.back()}
                 className="text-lg px-4 py-2 bg-gray-800 text-white dark:bg-white dark:text-gray-800 rounded"
-            >
-                Back
-            </button>
+            > Back </button>
 
                             
             <style jsx global>{`
@@ -59,9 +67,7 @@ export default function BlogPage({ data }) {
                     max-height: 60vh;
                 }
 
-                .markdown-blog > p > img{
-                    margin: 0px auto;
-                }
+                .markdown-blog > p > img{ margin: 0px auto; }
 
                 .markdown-blog > blockquote {
                     font-size: 125%;
@@ -71,9 +77,7 @@ export default function BlogPage({ data }) {
                     background-color: ${colorTheme === 'light'? '#0c1117': '#eaecef'};
                 }
 
-                .markdown-blog > blockquote > p {
-                    padding: 20px;
-                }
+                .markdown-blog > blockquote > p { padding: 20px;}
 
                 .markdown-blog > blockquote::before {
                     content: "\"";
@@ -81,29 +85,12 @@ export default function BlogPage({ data }) {
                     font-size: 36px;
                 }
 
-                .markdown-blog ol li{
-                    list-style: devanagari;
-                }
-
-                .markdown-blog ul li {
-                    list-style: disc;
-                }
-
-                .markdown-blog ul li *{
-                    margin-left: 0.5rem;
-                }
-
-                .markdown-blog ol li *{
-                    margin-left: 0.5rem;
-                }
-
-                .markdown-blog p a{
-                    color: #0088ff;
-                }
-
-                .markdown-blog p a: hover{
-                    color: #00ff88;
-                }
+                .markdown-blog ol li{ list-style: devanagari; }
+                .markdown-blog ul li { list-style: disc; }
+                .markdown-blog ul li *{ margin-left: 0.5rem; }
+                .markdown-blog ol li *{ margin-left: 0.5rem; }
+                .markdown-blog p a{ color: #0088ff }
+                .markdown-blog p a: hover{ color: #00ff88; }
 
             `}</style>
 

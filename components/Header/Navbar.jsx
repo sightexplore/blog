@@ -1,13 +1,13 @@
 import Link from 'next/link'
 import {Github, Instagram, Facebook, Youtube, SunLight, MoonDark} from '../MediaIcon'
-import useDarkMode from '../../hooks/useDarkMode'
 import useHideScroller from '../../hooks/useHideScroller'
+import { useTheme } from '../../hooks/useContextMode'
 
 
 
 export default function Navbar() {
 
-  const [colorTheme, setTheme] = useDarkMode()
+  const { colorTheme, changeTheme } = useTheme()
   useHideScroller("nav-hide",0,100)
 
     return (
@@ -34,7 +34,7 @@ export default function Navbar() {
               <Link href="/blog"><a className="sm:mr-6 mr-4 antialiased sm:text-base text-xs">Blog</a></Link>
               <Link href="/project"><a className="sm:mr-6 mr-4 antialiased sm:text-base text-xs">Project</a></Link>
               <button 
-                onClick={() => setTheme(colorTheme)} 
+                onClick={changeTheme} 
                 className="bg-gray-700 shadow-lg rounded-full w-7 h-7 text-white flex items-center justify-center"
               > 
                 { colorTheme === 'light' ? <SunLight size={20}/>: <MoonDark size={20}/>}

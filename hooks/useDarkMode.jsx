@@ -8,7 +8,7 @@ export default function useDarkMode() {
     try{
         defaultTheme = localStorage['theme-blog-script']
     }catch(err){
-        console.log("Local Storage for Theme Set")
+        // console.log("Local Storage for Theme Set")
     }
 
     const [theme, setTheme] = useState(defaultTheme)

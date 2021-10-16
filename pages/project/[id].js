@@ -12,7 +12,7 @@ export default function SubProject({data, title}) {
     return (
         <Layout>
             <Head>
-                <title>Sight Explore | Project</title>
+                <title>Sight Explore | { title } </title>
             </Head>
 
             <div className="text-center w-full my-32">

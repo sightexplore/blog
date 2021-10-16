@@ -1,4 +1,5 @@
 ---
+id: '3'
 title: 'SSR vs SSG'
 date: '2020-01-01'
 category: 'Computer'

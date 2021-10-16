@@ -4,9 +4,11 @@ import HeroBlock from '../components/HeroBlock'
 import IntroBlock from '../components/IntroBlock/IntroBlock'
 import Layout from '../components/Layout'
 import WorkBlock from '../components/WorkBlock/WorkBlock'
+import BlogFeature from '../components/BlogComponent/BlogFeature'
+import { getProjectCount } from '../lib/project'
 
 
-export default function Home() {
+export default function Home({ data }) {
 
   const title = `Explore you Limits`
   const tagline = `Never stop learning, because life never stops teaching.`
@@ -28,10 +30,21 @@ export default function Home() {
 
       <IntroBlock/>
       <AnalyticBlock/>
-      <WorkBlock />
+      <WorkBlock blogCount={data.length} projectCount={getProjectCount()} />
+
+      <BlogFeature data={data} />
 
     </Layout>
 
     </>
   )
+}
+
+
+export async function getStaticProps( ) {
+  const res = await fetch(`http://localhost:3000/api/blog`)
+  const data = await res.json()
+  return {
+    props: { data }, // will be passed to the page component as props
+  }
 }

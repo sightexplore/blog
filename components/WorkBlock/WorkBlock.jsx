@@ -1,9 +1,9 @@
-import Image from 'next/Image'
+import Image from 'next/image'
 import DataBlock from '../DataBlock';
-import { getProjectCount } from '../../lib/project'
 
 
-export default function WorkBlock() {
+export default function WorkBlock({ blogCount, projectCount }) {
+
     return (
       <section className="py-1 mt-16 mb-16">
 
@@ -22,8 +22,8 @@ export default function WorkBlock() {
         </div>
 
         <div className="flex justify-center items-center lg:mx-16 dark:text-gray-900 lg:flex-row flex-col">
-          <DataBlock color="purple" name="Blogs" count="12" />
-          <DataBlock color="pink" name="Project" count={getProjectCount()} />
+          <DataBlock color="purple" name="Blogs" count={blogCount} />
+          <DataBlock color="pink" name="Project" count={projectCount} />
         </div>
 
       </section>

@@ -3,8 +3,9 @@ import Layout from '../../components/Layout'
 import { useRouter } from 'next/router'
 import { getAllBlogIds, getBlogData } from '../../lib/blog'
 import Image from "next/image"
-import React from 'react'
 import { useTheme } from '../../hooks/useContextMode'
+import Link from 'next/link'
+import { FacebookProvider, Comments } from 'react-facebook'
 
 
 export default function BlogPage({ data }) {
@@ -14,10 +15,11 @@ export default function BlogPage({ data }) {
     const tags = data.tags.split(',')
     console.log(tags)
 
+
     return (
         <Layout>
             <Head>
-                <title>Blog | {data.title}</title>
+                <title>Blog | {data.title} </title>
             </Head>
             
             <div className="group main-blog relative">
@@ -40,13 +42,24 @@ export default function BlogPage({ data }) {
             <div className="my-8 mx-4 ">
                 <h1 className="text-xl mb-4">Tags:</h1>
                 <div className="flex flex-start text-sm flex-wrap text-gray-200 dark:text-gray-800">
-                    {tags.map((x,index) => 
-                        <p key={index} className="mr-2 mb-2 px-4 py-1 rounded-full dark:bg-white bg-gray-800 ">
-                            {x}
-                        </p>
+                    {tags.map((x,index) =>
+
+                        <Link href={`/blog/tags/${x.toLowerCase()}`}  key={index}  ><a>
+                            <p className="mr-2 mb-2 px-4 py-1 rounded-full dark:bg-white bg-gray-800 ">
+                                {x.toLowerCase()}
+                            </p>
+                        </a></Link>
                     )}
                 </div>
             </div>
+
+            <div className="sm:mx-24 sm:p-4 rounded-lg shadow-lg mb-16 bg-gray-300 dark:bg-gray-200 ">
+                <h1 className="text-center text-2xl font-bold text-gray-800 my-8"> Comments </h1>
+                <FacebookProvider appId="459712362082396">
+                    <Comments width="100%" href={`http://localhost:3000/blog/${data.id}`} />
+                </FacebookProvider>
+            </div>
+
 
             <button type="button" onClick={() => router.back()}
                 className="text-lg px-4 py-2 bg-gray-800 text-white dark:bg-white dark:text-gray-800 rounded"
@@ -54,8 +67,12 @@ export default function BlogPage({ data }) {
 
                             
             <style jsx global>{`
-                .markdown-blog > p, .markdown-blog > ul, .markdown-blog > blockquote, .markdown-blog > ol{
+                .markdown-blog > p, .markdown-blog > ul, .markdown-blog > ol{
                     margin: 16px 0;
+                }
+
+                .markdown-blog > blockquote{
+                    margin: 0 0 16px 0;
                 }
 
                 .markdown-blog > pre{

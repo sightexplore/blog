@@ -1,6 +1,6 @@
 import {Github, Instagram, Facebook, Youtube, SunLight, MoonDark} from '../MediaIcon'
 import Data from './Data'
-import Image from 'next/Image'
+import Image from 'next/image'
 
 export default function AnalyticBlock() {
     return (

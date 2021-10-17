@@ -4,7 +4,7 @@ import { useRouter } from 'next/router'
 import BlogView from '../../../components/BlogComponent/BlogView'
 
 
-export default function BlogPage({ search }) {
+export default function BlogBySearch({ search }) {
 
     const router = useRouter()
     console.log(search)

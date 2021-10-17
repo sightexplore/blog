@@ -1,0 +1,8 @@
+{
+  "java": "Java",
+  "c": "C",
+  "cpp": "C++",
+  "py": "Python",
+  "web": "Web",
+  "sql": "SQL"
+}

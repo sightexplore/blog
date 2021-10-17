@@ -6,7 +6,7 @@ import { mapAllProject, getProjectCount, getKeyCategory } from '../../lib/projec
 import DataBlock from '../../components/DataBlock'
 
 
-export default function project({ category }) {
+export default function Project({ category }) {
 
     const title = `Projects`
     const tagline = `Check out some programming `

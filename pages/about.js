@@ -6,7 +6,7 @@ import AboutUs from '../components/AboutUs/AboutUs'
 
 
 
-export default function about() {
+export default function About() {
 
     const title = `About`
     const tagline = `Let know us in detail`

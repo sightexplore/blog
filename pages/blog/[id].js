@@ -5,6 +5,8 @@ import { getAllBlogIds, getBlogData } from '../../lib/blog'
 import Image from "next/image"
 import { useTheme } from '../../hooks/useContextMode'
 import Link from 'next/link'
+
+// @ts-ignore
 import { FacebookProvider, Comments } from 'react-facebook'
 
 
@@ -13,7 +15,7 @@ export default function BlogPage({ data }) {
     const router = useRouter()
     const { colorTheme } = useTheme()
     const tags = data.tags.split(',')
-    console.log(tags)
+    // console.log(tags)
 
 
     return (
@@ -53,7 +55,7 @@ export default function BlogPage({ data }) {
                 </div>
             </div>
 
-            <div className="sm:mx-24 sm:p-4 rounded-lg shadow-lg mb-16 bg-gray-300 dark:bg-gray-200 ">
+            <div className="lg:mx-24 lg:p-4 rounded-lg shadow-lg mb-16 bg-gray-300 dark:bg-gray-200 ">
                 <h1 className="text-center text-2xl font-bold text-gray-800 my-8"> Comments </h1>
                 <FacebookProvider appId="459712362082396">
                     <Comments width="100%" href={`http://localhost:3000/blog/${data.id}`} />

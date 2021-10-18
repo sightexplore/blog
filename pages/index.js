@@ -42,7 +42,14 @@ export default function Home({ data }) {
 
 
 export async function getServerSideProps( ) {
-  const res = await fetch(`http://localhost:3000/api/blog`)
+
+  let res = ""
+  if(process.env.NEXT_PUBLIC_NODE_ENV === 'dev'){
+    res = await fetch(`${process.env.NEXT_PUBLIC_DEVELOPMENT}api/blog`)
+  }else{
+    res = await fetch(`${process.env.NEXT_PUBLIC_PRODUCTION}api/blog`)
+  }
+  
   const data = await res.json()
   return {
     props: { data }, // will be passed to the page component as props

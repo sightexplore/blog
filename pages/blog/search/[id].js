@@ -48,7 +48,14 @@ export default function BlogBySearch({ search }) {
 
 export async function getServerSideProps(context) {
     const { id } = context.query
-    const res = await fetch(`http://localhost:3000/api/blog`)
+
+    let res = ""
+    if(process.env.NEXT_PUBLIC_NODE_ENV === 'dev'){
+      res = await fetch(`${process.env.NEXT_PUBLIC_DEVELOPMENT}api/blog`)
+    }else{
+      res = await fetch(`${process.env.NEXT_PUBLIC_PRODUCTION}api/blog`)
+    }
+    
     const data = await res.json()
 
     const search = data.filter(x => x.title.toLowerCase().indexOf(id.toLowerCase()) !== -1)

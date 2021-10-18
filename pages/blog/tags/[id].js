@@ -44,7 +44,14 @@ export default function BlogByTags({ tags }) {
 
 export async function getServerSideProps(context) {
     const { id } = context.query;
-    const res = await fetch(`http://localhost:3000/api/blog`)
+
+    let res = ""
+    if(process.env.NEXT_PUBLIC_NODE_ENV === 'dev'){
+      res = await fetch(`${process.env.NEXT_PUBLIC_DEVELOPMENT}api/blog`)
+    }else{
+      res = await fetch(`${process.env.NEXT_PUBLIC_PRODUCTION}api/blog`)
+    }
+
     const data = await res.json()
 
     const tags = data.filter(x => x.tags.toLowerCase().split(',').includes(id) === true)

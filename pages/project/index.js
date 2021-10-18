@@ -26,8 +26,8 @@ export default function Project({ category }) {
             <HeroBlock title={title} tagline={tagline} src={src} links={links} />
 
             <div className="flex justify-center items-center lg:mx-16 dark:text-gray-900 lg:flex-row flex-col">
-              <DataBlock color="yellow" name="Category" count={category.length} />
-              <DataBlock color="indigo" name="Project" count={getProjectCount()} />
+              <DataBlock color={152} name="Category" count={category.length} />
+              <DataBlock color={104} name="Project" count={getProjectCount()} />
             </div>
 
             <div className="my-32">

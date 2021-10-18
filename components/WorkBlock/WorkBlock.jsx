@@ -22,8 +22,8 @@ export default function WorkBlock({ blogCount, projectCount }) {
         </div>
 
         <div className="flex justify-center items-center lg:mx-16 dark:text-gray-900 lg:flex-row flex-col">
-          <DataBlock color="purple" name="Blogs" count={blogCount} />
-          <DataBlock color="pink" name="Project" count={projectCount} />
+          <DataBlock color={172} name="Blogs" count={blogCount} />
+          <DataBlock color={280} name="Project" count={projectCount} />
         </div>
 
       </section>

@@ -9,11 +9,7 @@ export default function IntroBlock() {
             <section className="my-16 lg:mx-8">
             { Data.map((x, index) =>
                 {
-                    let staticStyle = `flex justify-evenly flex-col-reverse p-5 my-5 rounded-xl text-center sm:text-left`
-                    let dynamicColor = `bg-${x.color}-100 dark:bg-${x.color}-500`
-                    let direction = (x.direction)? `lg:flex-row-reverse`: `lg:flex-row`
-
-                    return <div key={index} className={`${staticStyle} ${dynamicColor} ${direction}`} >
+                    return <div key={index} className={x.styles} >
 
                         <div className="flex-1 flex justify-center self-center flex-col">
                             <h1 className="text-3xl mb-2 ">{x.title}</h1>
